@@ -1,0 +1,18 @@
+Write your solution here
+  $ alias SOLUTION='ls'
+
+Tests
+  $ ls
+  $ SOLUTION test1
+  ls: cannot access 'test1': No such file or directory
+  [2]
+
+  $ SOLUTION test2
+  ls: cannot access 'test2': No such file or directory
+  [2]
+
+  $ SOLUTION test3  
+  ls: cannot access 'test3': No such file or directory
+  [2]
+  $ pwd
+  /tmp/cramtests-ddbsh7vz/run.t
