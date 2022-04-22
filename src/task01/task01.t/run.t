@@ -1,8 +1,7 @@
 Write your solution here
-  $ alias SOLUTION='ls'
+  $ alias SOLUTION='cat -n'
 
 Tests
-  $ ls
   $ SOLUTION test1
        1	simple text
        2	0 1 2 3 4 5 6 7 8 9 10
