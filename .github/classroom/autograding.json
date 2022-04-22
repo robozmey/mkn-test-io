@@ -3,7 +3,7 @@
     {
       "name": "Test 1",
       "setup": "",
-      "run": "python run_cram src/task00",
+      "run": "python run_cram.py src/task00",
       "input": "",
       "output": ".\n# Ran 1 tests, 0 skipped, 0 failed.\n0",
       "comparison": "included",
