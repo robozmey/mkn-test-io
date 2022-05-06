@@ -3,7 +3,7 @@
     {
       "name": "Test 1",
       "setup": "",
-      "run": "python run_cram.py src/task00",
+      "run": "python run_cram.py tasks/task00/task00.t",
       "input": "",
       "output": ".\n# Ran 1 tests, 0 skipped, 0 failed.\n0",
       "comparison": "included",
@@ -13,9 +13,19 @@
     {
       "name": "Test 2",
       "setup": "",
+      "run": "python run_cram.py tasks/task01/task01.t",
+      "input": "",
+      "output": ".\n# Ran 1 tests, 0 skipped, 0 failed.\n0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test 3",
+      "setup": "",
       "run": "ls",
       "input": "",
-      "output": "",
+      "output": "Makefile\nPROBLEMS.md\nREADME.md\nSETUP.md\n_build\n dune-project\nrun_classroom.py\nrun_cram.py\ntasks\n",
       "comparison": "included",
       "timeout": 10,
       "points": 1

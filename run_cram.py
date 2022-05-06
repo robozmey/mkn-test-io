@@ -15,6 +15,10 @@ import cram
 
 # Сопоставить ожидаемый и настоящий вывод
 
+import difflib
+
+#print ('\n'.join(difflib.unified_diff([''], [''])))
+
 # Вывести ответ
 
 print(cram.main(sys.argv[1:]))
