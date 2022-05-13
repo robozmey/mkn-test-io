@@ -1,0 +1,14 @@
+Write your solution here
+  $ alias SOLUTION='...'
+
+Tests
+  $ touch file.txt
+
+  $ SOLUTION
+  /bin/sh: line 6: ...: command not found
+  [127]
+
+  $ ls -l file.txt | cut -c2-10
+  rw-r--r--
+
+  $ rm file.txt

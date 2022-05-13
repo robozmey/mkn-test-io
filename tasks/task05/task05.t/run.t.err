@@ -1,0 +1,6 @@
+Write your solution here
+  $ alias SOLUTION='...'
+
+  $ SOLUTION
+  /bin/sh: line 4: ...: command not found
+  [127]

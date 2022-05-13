@@ -70,7 +70,11 @@ def my_runtests(paths, tmpdir, shell, indent=2, cleanenv=True, debug=False):
             parent_dir = os.path.dirname(abspath)
             for f in os.listdir(parent_dir):
                 nf = os.path.join(parent_dir, f)
-                shutil.copy(nf.decode("utf-8"), testdir.decode("utf-8"))
+                if os.path.isdir(nf):
+                    nd = os.path.join(testdir, f)
+                    shutil.copytree(nf.decode("utf-8"), nd.decode("utf-8"))
+                else:
+                    shutil.copy(nf.decode("utf-8"), testdir.decode("utf-8"))
             #
             try:
                 os.chdir(testdir)
@@ -183,4 +187,4 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
         else:
             shutil.rmtree(tmpdir)
 
-print(my_main(sys.argv[1:]))
+my_main(sys.argv[1:])

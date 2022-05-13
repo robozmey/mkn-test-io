@@ -1,0 +1,16 @@
+Write your solution here
+  $ alias SOLUTION='...'
+
+
+Tests
+  $ touch test.txt && chmod u+w test.txt
+
+  $ chmod u+x solution.sh && bash solution.sh
+
+  $ SOLUTION
+  /bin/sh: line 8: ...: command not found
+  [127]
+
+  $ diff answer.txt test.txt
+  diff: answer.txt: No such file or directory
+  [2]

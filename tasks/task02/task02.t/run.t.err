@@ -1,0 +1,11 @@
+Write your solution here
+  $ alias SOLUTION='...'
+
+Tests
+  $ DIR='dir' && (SOLUTION)
+  /bin/sh: line 4: ...: command not found
+  [127]
+
+  $ DIR='dor' && (SOLUTION)
+  /bin/sh: line 6: ...: command not found
+  [127]
