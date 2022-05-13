@@ -8,7 +8,7 @@ Tests
 
   $ SOLUTION test2
        1	9'c�]���,[�G��R7��k���\1s�{γ���ZO옹{�'/�h�̏�K=7f]���-{�x�f#�5���\���슓Z�ʂ�}њ��x�J_i~MU�&M�z��C��B��
-       2	4�DQ�SS�c�^YEYQ�B�h%�A��N���F0[�M<R�JL2$-�gF�	�	������:���*Ps$�!�[
+       2	4�DQ�SS�c
 
   $ SOLUTION test3  
        1	
