@@ -1,5 +1,5 @@
 Write your solution here
-  $ alias SOLUTION='...'
+  $ alias SOLUTION='ls $DIR/*.cpp | wc -l'
 
 Tests
   $ DIR='dir' && (SOLUTION)

@@ -40,8 +40,9 @@ sum_points = 0
 for test in text['tests']:
     # Запустить команду
     output = execute_test(bytes(test['run'], 'utf-8').split(b'\n'))
+
     sum_points += test['points']
-    if output == test['output']:
+    if output == b(test['output']):
         points += test['points']
         print('Test: "' + test['name'] + '" successed')
     else:
@@ -49,7 +50,7 @@ for test in text['tests']:
         print((output).decode("utf-8") )
         
 
-print (points, sum_points)
+print ("Points: ", str(points) + "/" + str(sum_points))
 
 
 # Подсчитать и вывести ответ
