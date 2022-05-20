@@ -29,6 +29,16 @@
       "comparison": "included",
       "timeout": 10,
       "points": 1
+    },
+    {
+      "name": "Test 4",
+      "setup": "",
+      "run": "python tasks/classroomtasks/sum.py",
+      "input": "2 2",
+      "output": "4",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
     }
   ]
 }

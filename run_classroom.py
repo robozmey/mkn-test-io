@@ -21,7 +21,7 @@ def execute_test(run_test, shell='/bin/sh', env=None, cleanenv=True):
         env['GREP_OPTIONS'] = ''
     
 
-    output, retcode = execute([shell] + ['-'], stdin=b('').join(stdin),
+    output, retcode = execute([shell] + ['-'], stdin=b('\n').join(stdin),
                               stdout=PIPE, stderr=STDOUT, env=env)
 
     return output
@@ -39,15 +39,21 @@ sum_points = 0
 
 for test in text['tests']:
     # Запустить команду
-    output = execute_test(bytes(test['run'], 'utf-8').split(b'\n'))
+    output = execute_test(bytes(test['run'] + '\n' + test['input'] , 'utf-8').split(b'\n'))
+    output = output.decode("utf-8") 
+    # print (output)
 
     sum_points += test['points']
-    if output == b(test['output']):
+
+    if len(output) > 0 and (output[-1] == '\n' or output[-1] == ' '):
+        output = output[0:-1]
+
+    if output == test['output']:
         points += test['points']
         print('Test: "' + test['name'] + '" successed')
     else:
         print('Test: "' + test['name'] + '" failed')
-        print((output).decode("utf-8") )
+        print((output))
         
 
 print ("Points: ", str(points) + "/" + str(sum_points))
